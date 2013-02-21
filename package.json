@@ -1,0 +1,16 @@
+{
+  "name": "tnelec"
+, "version": "0.0.1"
+, "private": true
+, "dependencies": {
+    "express":"3.x"
+    , 
+    "requirejs": "latest"
+  }
+, "devDependencies": {
+    "mocha": "latest"
+  , "chai": "latest"
+  , "grunt": "latest"
+  , "grunt-exec": "latest"
+  }
+}
