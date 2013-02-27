@@ -38,7 +38,7 @@ function(template){
                     var ennahdha= this.sum('votes_ennahdha');
                     var cpr =this.sum('votes_cpr');
                     var tak =this.sum('votes_fdtl');
-                   $(".greenCircle").attr('value',Wasted*100/total_votes);
+                   $(".greenCircle").attr('value',wasted*100/total_votes);
                    $(".greenCircle").knob({
 		    'min':0,
 		    'max':100,
@@ -110,7 +110,7 @@ function(template){
 				},
 				grow: {	active: false}
 			},
-			legend:{show:false},
+			legend:{show:true},
 			grid: {
 	            hoverable: true,
 	            clickable: true
@@ -194,12 +194,26 @@ function(template){
 		};
 
 		$.plot($(".stacked-bars-chart"), dss, options);
-            
+                  var dataarray=[
+			    /* Reduced data set */
+			    this.column('circ_name').data,
+			    this.column('total_votes').data,
+			    this.column('Blank_ballots').data,
+			    this.column('cancelled_ballots').data,
+			    this.column('Wasted').data
+			];
+                   var transposed = 
                   /////////////////////
                   /////data table 
                   $('#wasted_table').dataTable( {
-			"sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-			"sPaginationType": "bootstrap"
+		   "aaData":$.transpose(dataarray),
+			"aoColumns": [
+			    { "sTitle":"Electoral district" },
+			    { "sTitle": "Total votes" },
+			    { "sTitle": "Blank ballots" },
+			    { "sTitle": "Cancelled ballots" },
+			    { "sTitle": "Wasted ballots" }
+			]	
 	          } ); 
                   //////// 
                   }
