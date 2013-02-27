@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'radset';
+	src:url('fonts/radset.eot');
+	src:url('fonts/radset.eot?#iefix') format('embedded-opentype'),
+		url('fonts/radset.woff') format('woff'),
+		url('fonts/radset.ttf') format('truetype'),
+		url('fonts/radset.svg#radset') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'radset';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-file:before, .icon-pie:before, .icon-bars:before, .icon-bars-2:before, .icon-stats:before, .icon-remove:before, .icon-remove-2:before {
+	font-family: 'radset';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-file:before {
+	content: "\21";
+}
+.icon-pie:before {
+	content: "\22";
+}
+.icon-bars:before {
+	content: "\23";
+}
+.icon-bars-2:before {
+	content: "\24";
+}
+.icon-stats:before {
+	content: "\25";
+}
+.icon-remove:before {
+	content: "\26";
+}
+.icon-remove-2:before {
+	content: "\27";
+}

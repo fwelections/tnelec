@@ -720,7 +720,7 @@ label {
 }
 select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
 	display: inline-block;
-	height: 20px;
+	height: 30px;
 	padding: 4px 6px;
 	margin-bottom: 9px;
 	font-size: 14px;
@@ -1535,9 +1535,7 @@ table {
 .icon-ok {
 	background-position: -288px 0;
 }
-.icon-remove {
-	background-position: -312px 0;
-}
+
 .icon-zoom-in {
 	background-position: -336px 0;
 }
@@ -1559,9 +1557,7 @@ table {
 .icon-home {
 	background-position: 0 -24px;
 }
-.icon-file {
-	background-position: -24px -24px;
-}
+
 .icon-time {
 	background-position: -48px -24px;
 }

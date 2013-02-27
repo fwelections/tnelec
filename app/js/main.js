@@ -2,7 +2,7 @@ requirejs.config({
   baseUrl: 'js',
 
   paths: {
-    text: 'lib/text',
+    text: 'lib/text'
   },
    
   shim: {
